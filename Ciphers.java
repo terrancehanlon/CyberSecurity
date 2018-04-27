@@ -61,7 +61,7 @@ public class Ciphers {
 				
 		for(int i = 0; i < 24; i++){
 		String str = Caesar_encrypt(x, i);
-		System.out.println(str);
+		System.out.println(str + "sss");
 		}
 	}
 }
