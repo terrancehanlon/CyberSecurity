@@ -1,7 +1,16 @@
 alphabet = "abcdefghijklmnopqrstuvwxyz"
 #decision = raw_input("Decrypt(0) or Encrypt(1)")
 message = raw_input("Enter message ")
+message_reformat = ""
 
+for letter in message:
+    if letter == " ":
+        continue
+    else:
+        message_reformat += letter
+
+print message
+print message_reformat
 
 dictonary_alphabet = {}
 dictonary_alphabet_source = {}
@@ -24,11 +33,11 @@ def encrypt_alphabet(shift):
             dictonary_encrypted_alphabet[val+shift] = letter
 
 
-def encrypt(message, shift):
+def encrypt(str, shift):
     encrypted_key_values = []
     encrypted_message = ""
 
-    for letter in message:
+    for letter in str:
         index = dictonary_alphabet.get(letter)
         new_index = 0
         print 'letter: ' + letter
@@ -44,5 +53,5 @@ def encrypt(message, shift):
 
 
 
-encrypt(message, 1)
+encrypt(message_reformat, 1)
 
